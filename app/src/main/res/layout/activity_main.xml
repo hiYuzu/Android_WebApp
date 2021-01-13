@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.hb712.webapp.MainActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            >
+            <cn.hb712.webapp.page.NoScrollViewPager
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary">
+            </cn.hb712.webapp.page.NoScrollViewPager>
+            <!--
+            <ImageButton
+                android:id="@+id/button_settings"
+                android:background="@drawable/action_settings"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_gravity="bottom|right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/settings"
+                tools:ignore="RtlHardcoded" />
+                -->
+        </FrameLayout>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            style="@style/MainActivity.TabLayout"
+            tools:ignore="NotSibling" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

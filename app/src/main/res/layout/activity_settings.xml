@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_layout"
+    android:layout_gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.hb712.webapp.SettingsActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:background="@color/colorPrimaryTranslucent"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+        <LinearLayout
+            android:layout_marginStart="@dimen/login_margin_horizontal"
+            android:layout_marginEnd="@dimen/login_margin_horizontal"
+            android:layout_marginTop="@dimen/setting_layout_margin_vertical"
+            android:layout_marginBottom="@dimen/setting_layout_margin_vertical"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+            <Button
+                android:id="@+id/logout"
+                android:text="@string/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/update"
+                android:text="@string/update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

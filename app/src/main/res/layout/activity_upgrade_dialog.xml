@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/upgrade_layout"
+    tools:context="cn.hb712.webapp.UpgradeDialog">
+
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/dialog_margin"
+        android:layout_marginEnd="@dimen/dialog_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:background="@color/black_overlay"
+                android:textSize="@dimen/upgrade_title_text_size"
+                android:textStyle="bold"
+                android:text="@string/upgrade_prompt"
+                android:padding="@dimen/fab_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="SpUsage" />
+            <GridLayout
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginEnd="@dimen/fab_margin"
+                android:layout_marginBottom="@dimen/fab_margin"
+                android:columnCount="2"
+                android:rowCount="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:text="@string/current_version" />
+                <TextView
+                    android:layout_marginStart="@dimen/fab_margin"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    android:id="@+id/current_version"
+                    />
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:text="@string/new_version" />
+                <TextView
+                    android:layout_marginStart="@dimen/fab_margin"
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    android:id="@+id/new_version"
+                    />
+                <TextView
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:text="@string/version_desc"
+                    />
+                <TextView
+                    android:id="@+id/new_version_desc"
+                    android:layout_marginStart="@dimen/fab_margin"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </GridLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginEnd="@dimen/fab_margin"
+                android:layout_marginBottom="@dimen/fab_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/upgrade"
+                    android:text="@string/upgrade"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/cancel"
+                    android:text="@string/cancel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
